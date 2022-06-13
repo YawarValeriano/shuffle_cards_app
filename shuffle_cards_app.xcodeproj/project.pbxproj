@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		43F632992C993E28D3496993 /* Pods_shuffle_cards_app.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC060B33D7CBAA199DA7C437 /* Pods_shuffle_cards_app.framework */; };
+		8403ED07285298F7001DE654 /* CardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8403ED05285298F7001DE654 /* CardCell.swift */; };
+		8403ED08285298F7001DE654 /* CardCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8403ED06285298F7001DE654 /* CardCell.xib */; };
+		8403ED0A2852A78D001DE654 /* CardModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8403ED092852A78D001DE654 /* CardModal.swift */; };
+		8403ED0D2853ED0A001DE654 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8403ED0C2853ED0A001DE654 /* NetworkManager.swift */; };
+		8403ED112853EE4A001DE654 /* CardD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8403ED102853EE4A001DE654 /* CardD.swift */; };
+		8403ED142853F84B001DE654 /* NetworkExeptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8403ED132853F84B001DE654 /* NetworkExeptions.swift */; };
+		8403ED1628540401001DE654 /* DeckD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8403ED1528540401001DE654 /* DeckD.swift */; };
 		8483850328521F29004B3CF9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8483850228521F29004B3CF9 /* AppDelegate.swift */; };
 		8483850528521F29004B3CF9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8483850428521F29004B3CF9 /* SceneDelegate.swift */; };
 		8483850728521F29004B3CF9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8483850628521F29004B3CF9 /* ViewController.swift */; };
@@ -16,6 +24,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3D0B0D2E9FE9A8592DDD8375 /* Pods-shuffle_cards_app.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-shuffle_cards_app.debug.xcconfig"; path = "Target Support Files/Pods-shuffle_cards_app/Pods-shuffle_cards_app.debug.xcconfig"; sourceTree = "<group>"; };
+		8403ED05285298F7001DE654 /* CardCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardCell.swift; sourceTree = "<group>"; };
+		8403ED06285298F7001DE654 /* CardCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CardCell.xib; sourceTree = "<group>"; };
+		8403ED092852A78D001DE654 /* CardModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardModal.swift; sourceTree = "<group>"; };
+		8403ED0C2853ED0A001DE654 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		8403ED102853EE4A001DE654 /* CardD.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardD.swift; sourceTree = "<group>"; };
+		8403ED132853F84B001DE654 /* NetworkExeptions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkExeptions.swift; sourceTree = "<group>"; };
+		8403ED1528540401001DE654 /* DeckD.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeckD.swift; sourceTree = "<group>"; };
 		848384FF28521F29004B3CF9 /* shuffle_cards_app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = shuffle_cards_app.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8483850228521F29004B3CF9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8483850428521F29004B3CF9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +40,8 @@
 		8483850B28521F2A004B3CF9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8483850E28521F2A004B3CF9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8483851028521F2A004B3CF9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EC060B33D7CBAA199DA7C437 /* Pods_shuffle_cards_app.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_shuffle_cards_app.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FEB82FA7341744B75AE19665 /* Pods-shuffle_cards_app.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-shuffle_cards_app.release.xcconfig"; path = "Target Support Files/Pods-shuffle_cards_app/Pods-shuffle_cards_app.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +49,71 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				43F632992C993E28D3496993 /* Pods_shuffle_cards_app.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		287E454534C2881DB4FF350F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3D0B0D2E9FE9A8592DDD8375 /* Pods-shuffle_cards_app.debug.xcconfig */,
+				FEB82FA7341744B75AE19665 /* Pods-shuffle_cards_app.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		57667EEF04DEACDAE77CD7E1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EC060B33D7CBAA199DA7C437 /* Pods_shuffle_cards_app.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8403ED042852985C001DE654 /* cells */ = {
+			isa = PBXGroup;
+			children = (
+				8403ED05285298F7001DE654 /* CardCell.swift */,
+				8403ED06285298F7001DE654 /* CardCell.xib */,
+			);
+			path = cells;
+			sourceTree = "<group>";
+		};
+		8403ED0B2853EB3E001DE654 /* managers */ = {
+			isa = PBXGroup;
+			children = (
+				8403ED0C2853ED0A001DE654 /* NetworkManager.swift */,
+			);
+			path = managers;
+			sourceTree = "<group>";
+		};
+		8403ED0F2853EE27001DE654 /* models */ = {
+			isa = PBXGroup;
+			children = (
+				8403ED102853EE4A001DE654 /* CardD.swift */,
+				8403ED1528540401001DE654 /* DeckD.swift */,
+			);
+			path = models;
+			sourceTree = "<group>";
+		};
+		8403ED122853F807001DE654 /* exeptions */ = {
+			isa = PBXGroup;
+			children = (
+				8403ED132853F84B001DE654 /* NetworkExeptions.swift */,
+			);
+			path = exeptions;
+			sourceTree = "<group>";
+		};
 		848384F628521F29004B3CF9 = {
 			isa = PBXGroup;
 			children = (
 				8483850128521F29004B3CF9 /* shuffle_cards_app */,
 				8483850028521F29004B3CF9 /* Products */,
+				287E454534C2881DB4FF350F /* Pods */,
+				57667EEF04DEACDAE77CD7E1 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,9 +128,14 @@
 		8483850128521F29004B3CF9 /* shuffle_cards_app */ = {
 			isa = PBXGroup;
 			children = (
+				8403ED122853F807001DE654 /* exeptions */,
+				8403ED0F2853EE27001DE654 /* models */,
+				8403ED0B2853EB3E001DE654 /* managers */,
+				8403ED042852985C001DE654 /* cells */,
 				8483850228521F29004B3CF9 /* AppDelegate.swift */,
 				8483850428521F29004B3CF9 /* SceneDelegate.swift */,
 				8483850628521F29004B3CF9 /* ViewController.swift */,
+				8403ED092852A78D001DE654 /* CardModal.swift */,
 				8483850828521F29004B3CF9 /* Main.storyboard */,
 				8483850B28521F2A004B3CF9 /* Assets.xcassets */,
 				8483850D28521F2A004B3CF9 /* LaunchScreen.storyboard */,
@@ -74,9 +151,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8483851328521F2A004B3CF9 /* Build configuration list for PBXNativeTarget "shuffle_cards_app" */;
 			buildPhases = (
+				EFD0E40D02D0A3D0F1E9675A /* [CP] Check Pods Manifest.lock */,
 				848384FB28521F29004B3CF9 /* Sources */,
 				848384FC28521F29004B3CF9 /* Frameworks */,
 				848384FD28521F29004B3CF9 /* Resources */,
+				C7DB1DDEE1FD503AD4606F1E /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -128,19 +207,68 @@
 				8483850F28521F2A004B3CF9 /* LaunchScreen.storyboard in Resources */,
 				8483850C28521F2A004B3CF9 /* Assets.xcassets in Resources */,
 				8483850A28521F29004B3CF9 /* Main.storyboard in Resources */,
+				8403ED08285298F7001DE654 /* CardCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		C7DB1DDEE1FD503AD4606F1E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-shuffle_cards_app/Pods-shuffle_cards_app-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-shuffle_cards_app/Pods-shuffle_cards_app-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-shuffle_cards_app/Pods-shuffle_cards_app-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EFD0E40D02D0A3D0F1E9675A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-shuffle_cards_app-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		848384FB28521F29004B3CF9 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8403ED0D2853ED0A001DE654 /* NetworkManager.swift in Sources */,
+				8403ED112853EE4A001DE654 /* CardD.swift in Sources */,
+				8403ED142853F84B001DE654 /* NetworkExeptions.swift in Sources */,
 				8483850728521F29004B3CF9 /* ViewController.swift in Sources */,
 				8483850328521F29004B3CF9 /* AppDelegate.swift in Sources */,
+				8403ED0A2852A78D001DE654 /* CardModal.swift in Sources */,
 				8483850528521F29004B3CF9 /* SceneDelegate.swift in Sources */,
+				8403ED1628540401001DE654 /* DeckD.swift in Sources */,
+				8403ED07285298F7001DE654 /* CardCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -284,6 +412,7 @@
 		};
 		8483851428521F2A004B3CF9 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3D0B0D2E9FE9A8592DDD8375 /* Pods-shuffle_cards_app.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -292,6 +421,7 @@
 				DEVELOPMENT_TEAM = MAQ973C7DT;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = shuffle_cards_app/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Shuffle App";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -312,6 +442,7 @@
 		};
 		8483851528521F2A004B3CF9 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FEB82FA7341744B75AE19665 /* Pods-shuffle_cards_app.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -320,6 +451,7 @@
 				DEVELOPMENT_TEAM = MAQ973C7DT;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = shuffle_cards_app/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Shuffle App";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
