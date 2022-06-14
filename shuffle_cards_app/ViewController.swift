@@ -30,44 +30,45 @@ class ViewController: UIViewController {
 
     @IBAction func shuffleCardsAction(_ sender: Any) {
         self.cards.removeAll()
+        getNewDeckId()
+    }
+    
+    func getNewDeckId() {
         let newDeckUrlStr = "https://deckofcardsapi.com/api/deck/new/shuffle/?deck_count=1"
-        
         guard let url = URL(string: newDeckUrlStr) else { return }
         SVProgressHUD.show()
         NetworkManager.shared.get(DeckD.self, from: url) { result in
             switch result {
             case .success(let deck):
-                let shuffledDeckStr = "https://deckofcardsapi.com/api/deck/\(deck.deckId)/draw/?count=52"
-                guard let shuffledDeckUrl = URL(string: shuffledDeckStr) else { return }
-                NetworkManager.shared.get(ShuffledDeckD.self, from: shuffledDeckUrl) { result in
-                    SVProgressHUD.dismiss()
-                    switch result {
-                    case .success(let deck):
-                        self.cards = deck.cards
-                        self.cardCollection.reloadData()
-                    case .failure(let error):
-                        print(error)
-                    }
-                }
+                self.getShuffledCards(fromID: deck.deckId)
             case .failure(let error):
-                print(error)
+                let alert = UIAlertController(title: "Error", message: error.localizedDescription, preferredStyle: .alert)
+                alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { action in
+                    print("OK")
+                }))
+                self.present(alert, animated: true, completion: nil)
             }
         }
-
+        SVProgressHUD.dismiss()
     }
     
-//    func getRequest(urlStr: String) async throws -> [ String: Any] {
-//        guard let url = URL(string: urlStr) else {
-//            throw "LocalizedError here"
-//        }
-//
-//        let (data, _) = try await URLSession.shared.data(from: url)
-//
-//
-//        guard let result = try JSONSerialization.jsonObject(with: data, options: []) as? [ String: Any ] else { return [:] }
-//
-//        return result
-//    }
+    func getShuffledCards(fromID deckId: String) {
+        let shuffledDeckStr = "https://deckofcardsapi.com/api/deck/\(deckId)/dra2w/?count=52"
+        guard let shuffledDeckUrl = URL(string: shuffledDeckStr) else { return }
+        NetworkManager.shared.get(ShuffledDeckD.self, from: shuffledDeckUrl) { result in
+            switch result {
+            case .success(let deck):
+                self.cards = deck.cards
+                self.cardCollection.reloadData()
+            case .failure(let error):
+                let alert = UIAlertController(title: "Error", message: error.localizedDescription, preferredStyle: .alert)
+                alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { action in
+                    print("OK")
+                }))
+                self.present(alert, animated: true, completion: nil)
+            }
+        }
+    }
 
 }
 
