@@ -95,7 +95,7 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource, 
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let cell = collectionView.cellForItem(at: indexPath) as! CardCell
+        guard let cell = collectionView.cellForItem(at: indexPath) as? CardCell else { return }
         guard let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: CardModal.identifier) as? CardModal else { return }
         vc.cardImage = cell.cardImage.image
         navigationController?.present(vc, animated: true, completion: nil)
