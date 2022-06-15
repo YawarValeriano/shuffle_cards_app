@@ -8,6 +8,8 @@
 import UIKit
 
 class CardModal: UIViewController {
+    static let identifier: String = "CardModal"
+    
     var cardImage: UIImage?
 
     @IBOutlet weak var selectedCard: UIImageView!

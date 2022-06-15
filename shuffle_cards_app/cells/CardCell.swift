@@ -8,6 +8,8 @@
 import UIKit
 
 class CardCell: UICollectionViewCell {
+    static let identifier: String = "CellIdentifier"
+    static let uiNibName: String = "CardCell"
 
     @IBOutlet weak var cardImage: UIImageView!
     override func awakeFromNib() {

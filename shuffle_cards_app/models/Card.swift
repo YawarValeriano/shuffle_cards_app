@@ -6,3 +6,12 @@
 //
 
 import Foundation
+
+struct ShuffledDeck: Decodable {
+    public var cards: [Card]
+}
+
+struct Card: Decodable {
+    public var code: String
+    public var image: String
+}

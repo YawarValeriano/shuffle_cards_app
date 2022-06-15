@@ -6,3 +6,12 @@
 //
 
 import Foundation
+
+
+struct Deck: Decodable {
+    public var deckId: String
+    
+    enum CodingKeys: String, CodingKey {
+        case deckId = "deck_id"
+    }
+}
