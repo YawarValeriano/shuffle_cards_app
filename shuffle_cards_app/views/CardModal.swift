@@ -10,7 +10,7 @@ import UIKit
 class CardModal: UIViewController {
     static let identifier: String = "CardModal"
     
-    var cardImage: UIImage?
+    var cardData: Card?
 
     @IBOutlet weak var selectedCard: UIImageView!
     
@@ -21,8 +21,10 @@ class CardModal: UIViewController {
         
         view.addGestureRecognizer(UIPanGestureRecognizer(target: self, action: #selector(handleDismiss)))
         
-        if let data = cardImage {
-            selectedCard.image = data
+        if let card = cardData {
+            guard let imageURL = URL(string: card.image) else { return }
+            selectedCard.image = ImageManager.shared.getUIImage(formURL: imageURL)
+            
         }
 
     }

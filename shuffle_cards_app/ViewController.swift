@@ -83,7 +83,7 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource, 
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CardCell.identifier, for: indexPath) as? CardCell ?? CardCell()
         let card = cards[indexPath.row]
         if let imageURL = URL(string: card.image) {
-            cell.cardImage.load(url: imageURL)
+            cell.cardImage.image = ImageManager.shared.getUIImage(formURL: imageURL)
         }
         return cell
     }
@@ -95,32 +95,11 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource, 
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        guard let cell = collectionView.cellForItem(at: indexPath) as? CardCell else { return }
+        let card = cards[indexPath.row]
         guard let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: CardModal.identifier) as? CardModal else { return }
-        vc.cardImage = cell.cardImage.image
+        vc.cardData = card
         navigationController?.present(vc, animated: true, completion: nil)
     }
     
     
-}
-
-let cardCache = NSCache<AnyObject, AnyObject>()
-
-extension UIImageView {
-    func load(url: URL) {
-        if let cardFromCache = cardCache.object(forKey: url as AnyObject) as? UIImage {
-            self.image = cardFromCache
-            return
-        }
-        DispatchQueue.global().async {
-            if let data = try? Data(contentsOf: url) {
-                if let cardToCache = UIImage(data: data) {
-                    DispatchQueue.main.async {
-                        cardCache.setObject(cardToCache, forKey: url as AnyObject)
-                        self.image = cardToCache
-                    }
-                }
-            }
-        }
-    }
 }
