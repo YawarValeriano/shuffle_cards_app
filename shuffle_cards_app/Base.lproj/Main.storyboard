@@ -25,7 +25,7 @@
                                 </connections>
                             </button>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="5HY-M2-V72">
-                                <rect key="frame" x="25" y="149" width="364" height="713"/>
+                                <rect key="frame" x="25" y="200" width="364" height="662"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="63J-Ce-MpO">
                                     <size key="itemSize" width="128" height="128"/>
@@ -35,28 +35,36 @@
                                 </collectionViewFlowLayout>
                                 <cells/>
                             </collectionView>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="Mnd-f3-sXI">
+                                <rect key="frame" x="10" y="139" width="394" height="51"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="lOB-Rx-3o5" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="36c-2B-zgk"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="5HY-M2-V72" secondAttribute="bottom" id="B94-D5-tfb"/>
-                            <constraint firstItem="5HY-M2-V72" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="25" id="CaH-yu-C8e"/>
+                            <constraint firstItem="5HY-M2-V72" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="25" id="56v-r7-8wg"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="5HY-M2-V72" secondAttribute="trailing" constant="25" id="8Rv-Jc-EMx"/>
+                            <constraint firstItem="Mnd-f3-sXI" firstAttribute="top" secondItem="lOB-Rx-3o5" secondAttribute="bottom" constant="10" id="DXH-Ti-mHL"/>
                             <constraint firstItem="lOB-Rx-3o5" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="PNx-ca-W37"/>
-                            <constraint firstItem="5HY-M2-V72" firstAttribute="top" secondItem="lOB-Rx-3o5" secondAttribute="bottom" constant="20" id="QNT-8u-aG1"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="5HY-M2-V72" secondAttribute="trailing" constant="25" id="W1e-EJ-tzF"/>
+                            <constraint firstAttribute="trailing" secondItem="Mnd-f3-sXI" secondAttribute="trailing" constant="10" id="QdJ-dn-cx8"/>
+                            <constraint firstItem="5HY-M2-V72" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="eb8-YE-CWj"/>
+                            <constraint firstItem="Mnd-f3-sXI" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="iJn-TT-vPO"/>
+                            <constraint firstItem="5HY-M2-V72" firstAttribute="top" secondItem="Mnd-f3-sXI" secondAttribute="bottom" constant="10" id="mKY-9B-eTi"/>
                             <constraint firstItem="lOB-Rx-3o5" firstAttribute="width" secondItem="6Tk-OE-BBY" secondAttribute="width" multiplier="0.7" id="tS9-ap-Wct"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Suffled Cards App" id="YrX-T1-5Q1"/>
                     <connections>
                         <outlet property="cardCollection" destination="5HY-M2-V72" id="rlH-tp-9sU"/>
+                        <outlet property="searchCard" destination="Mnd-f3-sXI" id="pLH-vk-pmr"/>
                         <outlet property="shuffleButton" destination="lOB-Rx-3o5" id="A9X-df-dRJ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="133" y="96"/>
+            <point key="canvasLocation" x="131.8840579710145" y="95.758928571428569"/>
         </scene>
         <!--Card Modal-->
         <scene sceneID="yNZ-JT-MWK">
