@@ -57,6 +57,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Suffled Cards App" id="YrX-T1-5Q1"/>
                     <connections>
+                        <outlet property="bottomCollectionConstraint" destination="eb8-YE-CWj" id="IVU-Ri-Nab"/>
                         <outlet property="cardCollection" destination="5HY-M2-V72" id="rlH-tp-9sU"/>
                         <outlet property="searchCard" destination="Mnd-f3-sXI" id="pLH-vk-pmr"/>
                         <outlet property="shuffleButton" destination="lOB-Rx-3o5" id="A9X-df-dRJ"/>

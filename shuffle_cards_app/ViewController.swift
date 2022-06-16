@@ -14,13 +14,34 @@ class ViewController: UIViewController {
     @IBOutlet weak var cardCollection: UICollectionView!
     @IBOutlet weak var shuffleButton: UIButton!
     @IBOutlet weak var searchCard: UISearchBar!
+    @IBOutlet weak var bottomCollectionConstraint: NSLayoutConstraint!
     
     var cards: [Card] = []
     var filteredCards: [Card] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(_:)), name: UIResponder.keyboardWillShowNotification, object: nil)
+        
         initializeCollectionAndSearchBar()
+    }
+    
+    @IBAction func shuffleCardsAction(_ sender: Any) {
+        self.cards.removeAll()
+        getNewDeckId()
+    }
+    
+    @objc func keyboardWillShow(_ notification: Notification) {
+        guard let userInfo = notification.userInfo,
+            let keyboardFrame = userInfo[UIResponder.keyboardFrameEndUserInfoKey] as? CGRect,
+            let duration = userInfo[UIResponder.keyboardAnimationDurationUserInfoKey] as? TimeInterval
+        else { return }
+        
+        bottomCollectionConstraint.constant = keyboardFrame.size.height * -1
+        
+        UIView.animate(withDuration: duration) {
+            self.view.layoutIfNeeded()
+        }
     }
     
     func initializeCollectionAndSearchBar(){
@@ -33,12 +54,6 @@ class ViewController: UIViewController {
         searchCard.showsCancelButton = true
         searchCard.delegate = self
     
-    }
-
-
-    @IBAction func shuffleCardsAction(_ sender: Any) {
-        self.cards.removeAll()
-        getNewDeckId()
     }
     
     func getNewDeckId() {
@@ -81,6 +96,8 @@ class ViewController: UIViewController {
         }))
         self.present(alert, animated: true, completion: nil)
     }
+    
+    
 
 }
 
@@ -99,7 +116,7 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource, 
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let width = collectionView.frame.width/3.5
+        let width = collectionView.frame.width/4
         let height = collectionView.frame.height/4
         return CGSize(width: width, height: height)
     }
@@ -118,6 +135,7 @@ extension ViewController: UISearchBarDelegate {
         self.cardCollection.reloadData()
         searchBar.text = ""
         view.endEditing(true)
+        bottomCollectionConstraint.constant = 0
     }
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
