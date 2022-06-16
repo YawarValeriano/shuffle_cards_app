@@ -124,7 +124,12 @@ extension ViewController: UISearchBarDelegate {
         if searchText.isEmpty {
             self.filteredCards = self.cards
         } else {
-            self.filteredCards = cards.filter({ $0.code.contains(searchText.capitalized)})
+            let textToSearch = searchText.lowercased()
+            self.filteredCards = cards.filter { card in
+                card.code.lowercased().contains(textToSearch) ||
+                card.suit.lowercased().contains(textToSearch) ||
+                card.value.lowercased().contains(textToSearch)
+            }
         }
         
         self.cardCollection.reloadData()

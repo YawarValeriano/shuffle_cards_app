@@ -7,11 +7,15 @@
 
 import Foundation
 
-struct ShuffledDeck: Decodable {
-    public var cards: [Card]
-}
-
 struct Card: Decodable {
     public var code: String
     public var image: String
+    public var images: Image
+    public var value: String
+    public var suit: String
+}
+
+struct Image: Decodable {
+    public var svg: String
+    public var png: String
 }

@@ -15,3 +15,14 @@ struct Deck: Decodable {
         case deckId = "deck_id"
     }
 }
+
+struct ShuffledDeck: Decodable {
+    public var success: Bool
+    public var deckId: String
+    public var cards: [Card]
+    
+    enum CodingKeys: String, CodingKey {
+        case deckId = "deck_id"
+        case success, cards
+    }
+}
